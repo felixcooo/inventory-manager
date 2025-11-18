@@ -1,3 +1,4 @@
+import inventoryRoutes from "./routes/inventory.js";
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -6,6 +7,8 @@ dotenv.config();
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+app.use("/api/inventory", inventoryRoutes);
 
 app.get("/", (req, res) => {
   res.send("🎮 Hello from backend!");
