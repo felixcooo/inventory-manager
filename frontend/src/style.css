@@ -1,0 +1,15 @@
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+  }
+  
+  div {
+    background: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+  }
+  
+  input {
+    margin: 5px;
+  }  
