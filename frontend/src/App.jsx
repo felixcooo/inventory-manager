@@ -51,6 +51,14 @@ function App() {
         {items.map((item) => (
           <li key={item.id}>
             {item.name} — {item.condition} — ${item.price} — Stock: {item.stock}
+
+            <button onClick={() => updateItem(item.id, { ...item, stock: item.stock + 1 }).then(loadItems)}>
+              + Stock
+            </button>
+
+            <button onClick={() => deleteItem(item.id).then(loadItems)}>
+              Delete
+            </button>
           </li>
         ))}
       </ul>
